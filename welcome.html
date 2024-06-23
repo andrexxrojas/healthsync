@@ -1,0 +1,156 @@
+<style>
+    @font-face {
+        font-family: "Satoshi Bold";
+        src: url(Satoshi-Bold.otf);
+    }
+
+    @font-face {
+        font-family: "Satoshi Regular";
+        src: url(Satoshi-Regular.otf);
+    }
+
+    @font-face {
+        font-family: "Satoshi Medium";
+        src: url(Satoshi-Medium.otf);
+    }
+
+    @font-face {
+        font-family: "Satoshi Light";
+        src: url(Satoshi-Light.otf);
+    }
+
+    body{
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        background-color: #ECECEC;
+        user-select: none;
+    }
+
+    .logout{
+        position: absolute;
+        top: 27px;
+        left: 27px;
+        font-family: "Satoshi Medium";
+        font-size: 16px;
+        cursor: pointer;
+        padding: 10px 10px 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logout img{
+        height: 35px;
+    }
+
+    .container h1{
+        text-align: center;
+        font-size: 64px;
+        font-family: "Satoshi Medium";
+        margin: 97px 0 56px 0;
+    }
+
+    .container table{
+        width: 100%;
+        border-spacing: 0 10px;
+    }
+
+    .container h4{
+        font-size: 20px;
+        font-family: "Satoshi Medium";
+        margin: 0 0 10px 0;
+    }
+
+    th, td{
+        text-align: left;
+        height: 80px;
+        font-size: 20px;
+        font-family: "Satoshi Medium";
+        padding-left: 24px;
+    }
+
+    tr th:first-child{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    tr th:last-child{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    tr td:first-child{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    tr td:last-child{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: relative;
+    }
+
+    tr td i{
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        font-size: 30px;
+        transform: translateY(-50%) rotate(90deg);
+    }
+
+    tr{
+        background-color: white;
+    }
+
+    tr:not(:first-child){
+        cursor: pointer;
+        position: relative;
+        transition: 0.3s ease-in-out;
+    }
+
+    tr:not(:first-child):hover{
+        background-color: #6abce2;
+        color: #181818;
+    }
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Sync | Welcome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="logout">
+            <img src="logout.svg" alt="">
+            Logout
+        </div>
+
+        <h1>Welcome Dr. Juan Dela Cruz</h1>
+
+        <h4>Patients List</h4>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Diseases</th>
+            </tr>
+
+            <tr>
+                <td>Juan Dela Cruz</td>
+                <td>
+                    High Blood
+                    <i class="fa-solid fa-angle-up"></i>
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

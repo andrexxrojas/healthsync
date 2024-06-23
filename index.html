@@ -1,0 +1,111 @@
+<style>
+    @font-face {
+        font-family: "Satoshi Bold";
+        src: url(Satoshi-Bold.otf);
+    }
+
+    @font-face {
+        font-family: "Satoshi Regular";
+        src: url(Satoshi-Regular.otf);
+    }
+
+    @font-face {
+        font-family: "Satoshi Medium";
+        src: url(Satoshi-Medium.otf);
+    }
+
+    @font-face {
+        font-family: "Satoshi Light";
+        src: url(Satoshi-Light.otf);
+    }
+
+    body{
+        margin: 0;
+        padding: 0 20px 60px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        min-height: 100vh;
+        background-color: #ECECEC;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .loginContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - 70px);
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    .container h1{
+        font-size: 64px;
+        font-family: "Satoshi Bold";
+        text-align: center;
+    }
+
+    .loginContainer{
+        border: 1px solid black;
+        max-width: 524px;
+        padding: 35px;
+    }
+
+    .loginContainer h4{
+        font-size: 20px;
+        font-family: "Satoshi Medium";
+    }
+
+    .loginContainer input{
+        width: 100%;
+        height: 50px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        padding: 15px;
+        border: 1px solid black;
+        outline: none;
+    }
+
+    .loginBtn{
+        height: 53px;
+        width: 191px;
+        font-size: 20px;
+        font-family: "Satoshi Bold";
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Sync | Login</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Health Sync</h1>
+
+        <div class="loginContainer">
+            <h4>Please Login</h4>
+            <input type="text" placeholder="Enter your username">
+            <input type="password" placeholder="Enter your password">
+            <button class="loginBtn">Login</button>
+        </div>
+    </div>
+
+</body>
+</html>

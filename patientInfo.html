@@ -1,0 +1,293 @@
+<style>
+    @font-face {
+        font-family: "Satoshi Medium";
+        src: url(Satoshi-Medium.otf);
+    }
+
+    body{
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        background-color: #ECECEC;
+        user-select: none;
+        font-family: "Satoshi Medium";
+    }
+
+    h4{
+        margin: 0;
+    }
+
+    .back{
+        position: absolute;
+        top: 27px;
+        left: 27px;
+        font-family: "Satoshi Medium";
+        font-size: 16px;
+        cursor: pointer;
+        padding: 10px 10px 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .back .fa-solid{
+        transform: rotate(180deg);
+    }
+
+    .container{
+        margin: 78px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 18px;
+    }
+
+    .patientInfo{
+        background-color: white;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        border-radius: 10px;
+    }
+
+    .patientInfo .secondLine{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        justify-content: space-between;
+    }
+
+    .patientInfo .thirdLine{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        justify-content: space-between;
+    }
+
+    .name::before{ content: "Patient Name: "; color: #818181;}
+    .age::before { content: "Age: "; color: #818181; }
+    .contact::before { content: "Contact No: "; color: #818181; }
+    .contactPerson::before { content: "Contact Person: "; color: #818181; }
+    .contactEmer::before { content: "Emergency Contact No: "; color: #818181; }
+    .address::before { content: "Address: "; color: #818181; }
+    .lastSeen::before { content: "Last seen: "; color: #818181; }
+
+    .SyncCareSays{
+        padding: 15px 15px 20px 15px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .SyncCareSays .box{
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-top: 15px;
+        min-height: 90px;
+        padding: 10px;
+    }
+
+    .organizer{
+        display: flex;
+        column-gap: 15px;
+    }
+    
+    .organizer .box{
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .organizer .info{
+        min-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Satoshi Medium";
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .organizer .info img{
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-right: 20px;
+    }
+
+    .organizer .lastLogged{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .lastLogged span:first-child{
+        color: #818181;
+    }
+
+    .lastLogged span:last-child{
+        text-align: end;
+    }
+
+    .empty.box{
+        visibility: hidden;
+    }
+
+    .fall.box h4{
+        margin-bottom: 10px;
+    }
+
+    table{
+        width: 100%;
+        border-spacing: 0 10px;
+    }
+
+    table td{
+        border-bottom: 1px solid #818181;
+        padding-bottom: 10px;
+    }
+
+    table tr td:last-child{
+        text-align: end;
+    }
+
+    @media screen and (max-width: 768px){
+        .empty.box{
+            display: none;
+        }
+
+        .organizer .info{
+            font-size: 36px;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+
+        .organizer .info img{
+            margin: 0 0 20px 0;
+        }
+    }
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Sync | Patient Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="back">
+            <i class="fa-solid fa-arrow-right"></i>
+            Back
+        </div>
+
+        <div class="patientInfo">
+            <div class="name">Juan Dela Cruz</div>
+            <div class="secondLine">
+                <div class="age">26</div>
+                <div class="contact">+63</div>
+                <div class="contactPerson">Lorem Ipsum</div>
+                <div class="contactEmer">Lorem Ipsum</div>
+            </div>
+            <div class="thirdLine">
+                <div class="address">Lorem Ipsum</div>
+                <div class="lastSeen">7 mins ago</div>
+            </div>
+        </div>
+
+        <div class="SyncCareSays">
+            <h4>SyncCare says...</h4>
+            <div class="box">
+                Lorem Ipsum...
+            </div>
+        </div>
+
+        <div class="organizer">
+            <div class="pulse box">
+                <h4>Pulse Rate</h4>
+                <div class="rate info">
+                    <img src="heart-rate-icon.svg" alt="">
+                    76 BPM
+                </div>
+                <div class="lastLogged">
+                    <span>
+                        Last Data Logged:
+                    </span>
+                    <span>
+                        June 22, 2024, 1:20 PM
+                    </span>
+                </div>
+            </div>
+            <div class="temp box">
+                <h4>Temperature</h4>
+                <div class="temperature info">
+                    <img src="thermometer-icon.svg" alt="">
+                    36 C
+                </div>
+                <div class="lastLogged">
+                    <span>
+                        Last Data Logged:
+                    </span>
+                    <span>
+                        June 22, 2024, 1:20 PM
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="organizer">
+            <div class="glucose box">
+                <h4>Glucose</h4>
+                <div class="glucoseInfo info">
+                    <img src="blood-drop-icon.svg" alt="">
+                    94.00
+                </div>
+                <div class="lastLogged">
+                    <span>
+                        Last Data Logged:
+                    </span>
+                    <span>
+                        June 22, 2024, 1:20 PM
+                    </span>
+                </div>
+            </div>
+            <div class="oxygen box">
+                <h4>Oxygen Saturation</h4>
+                <div class="oxygenSat info">
+                    <img src="o2-oxygen-icon.svg" alt="">
+                    97.00
+                </div>
+                <div class="lastLogged">
+                    <span>
+                        Last Data Logged:
+                    </span>
+                    <span>
+                        June 22, 2024, 1:20 PM
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="organizer">
+            <div class="fall box">
+                <h4>Fall Detection History</h4>
+                <table>
+                    <tr>
+                        <td>Last Data Logged: </td>
+                        <td>June 22, 2024, 1:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Last Data Logged: </td>
+                        <td>June 22, 2024, 1:30 PM</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="empty box"></div>
+        </div>
+    </div>
+
+</body>
+</html>
